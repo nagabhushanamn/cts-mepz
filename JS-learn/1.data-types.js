@@ -181,9 +181,9 @@ person.name = "Nag N";
 
 person['full-name']="Nagabhushanam N"
 
-console.log(person.name);
+// console.log(person.name);
 // console.log(person['name']);
-console.log(person['full-name']);
+// console.log(person['full-name']);
 
 
 
@@ -197,7 +197,7 @@ person.age = 32;
 
 delete person.age;
 
-console.log(person.age)
+// console.log(person.age)
 
 
 
