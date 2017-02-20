@@ -11,6 +11,7 @@ function sessionStart() {
             function doLearn() {
                 console.log(this.name+" learning .js from "+self.name);
             }
+            return doLearn;
         }
     }
 
