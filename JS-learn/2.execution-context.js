@@ -43,7 +43,7 @@
  
 //----------------------------------------------------------------------
 
-    every function invocation also creates new-context which is child of where(context) function declared
+    every function invocation also creates new-context which is child of where(context) function is declared
 
 //----------------------------------------------------------------------
 
@@ -82,3 +82,4 @@ var f2=f1(); // f1-context  ==> global-context
 
 f2(); // // f2-context ==> f1-context
 
+//----------------------------------------------------------------------
