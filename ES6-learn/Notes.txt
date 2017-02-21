@@ -1,0 +1,19 @@
+
+
+Javascript : ES6
+---------------------
+
+New-syntax
+
+
+ 1. let,const keywords
+ 2. arrow functions
+ 3. default function params
+ 4. rest & spread operators
+ 5. for-of loop
+ 6. destructuring
+ 7. object-literal enhancements
+ 8. string/template interpolation
+ 9. octal & binary support
+ 
+ --------------------------------------
