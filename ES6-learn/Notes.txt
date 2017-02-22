@@ -16,4 +16,8 @@ New-syntax
  8. string/template interpolation
  9. octal & binary support
  
- --------------------------------------
+ --------------------------------
+
+ 10. class
+
+ --------------------------------
