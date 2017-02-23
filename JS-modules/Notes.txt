@@ -3,7 +3,6 @@
 .js module standards from third-parties
 -----------------------------------------
 
-
   1. AMD ( Async Module Definition)
   2. commonJS
 
@@ -29,7 +28,7 @@
 
  commonJS standards
 
- --> simple approach to define module
+ --> simple approach to define/require module
 
  --> every .js file is module by default
  --> all variable/func in .js are private to that module by default
@@ -38,4 +37,15 @@
  --> we can group related modules in package
 
 imp-note : Node.js runtime uses commonJS as default module standard.
- ---------------------------------------------------------------
+ 
+---------------------------------------------------------------
+
+
+
+
+
+  ECMAScript 2015 or ES6
+
+  ==> ES6 modules
+
+----------------------------------------------

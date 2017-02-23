@@ -1,0 +1,75 @@
+
+
+ what .js-lang can do on HTML-page in browser-envi?
+
+ using browser provided Web APIs, 
+ .js-lang can bring any dynamic-behav to HTML-page
+
+ browser provided Web APIs
+
+  e.g  DOM,XHR,Timer, HTML-5 APIs   ==> are based on w3c stanadard
+
+ all web-APIs implemented and abstracted as .js objects and functions.
+
+  using DOM
+  -----------
+  --> create,query,update,delete HTML elements
+  --> can change element's attributes
+  --> can change element's style
+  --> can change element's text-content
+  --> can change element's innerHTML
+  --> can listen events on elements
+  --> can create rich UI components
+
+using XHR
+----------
+  --> can communicate with server async, update results on existing page ( AJAX)
+
+using Timer API
+----------------
+setInterval,setTimeout()
+
+HTML-5 APIs
+---------------
+
+ ref : https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5
+
+ 
+
+
+
+limitations/complexities of plain-js  in front-end appln
+-------------------------------------------------------
+
+ --> browser compatibility
+ --> too much code for simple-oprns
+
+ --> performance issues ( e.g DOM manipulation )
+ --> memory management ( cleaning un-used DOM elements, un-registering event listeners)
+
+ --> code organization is difficult
+
+ -------------------------------------------------------
+
+ soln : using .js libraries and F.Ws
+
+        --> jQuery
+
+
+         Limitations of jQuery
+
+         => close to DOM
+         => developing re-usable components is difficult
+         => code oraganization is difficult
+         => data-binding difficult
+
+
+        --> F.W s
+   ------------------------------------------------------
+
+   React ==> View Library ==> View Components : from Facebook
+
+   -------------------------------------------------------      
+
+     
+
