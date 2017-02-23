@@ -1,0 +1,41 @@
+
+
+.js module standards from third-parties
+-----------------------------------------
+
+
+  1. AMD ( Async Module Definition)
+  2. commonJS
+
+  3. SystemJS
+  4. UMD
+
+  ......
+
+--------------------------------------------------------------
+
+  AMD spec
+  -----------
+
+  to define module
+
+  ==> define('mid',[],factory)
+
+  to load/require module
+
+  ==> require(config,[],callback);
+--------------------------------------------------------------
+
+
+ commonJS standards
+
+ --> simple approach to define module
+
+ --> every .js file is module by default
+ --> all variable/func in .js are private to that module by default
+ --> to abstract any member to other module , use 'module.exports'
+ --> to require any member , use 'require(module)'
+ --> we can group related modules in package
+
+imp-note : Node.js runtime uses commonJS as default module standard.
+ ---------------------------------------------------------------
