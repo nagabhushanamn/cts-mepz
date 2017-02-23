@@ -31,15 +31,19 @@
 
 //---------------------------------------------------------------
 
-// import MainComp,{ Comp1,Comp2 } from './pack1/module1';
-import { default as MainComp,Comp1 } from './pack1/module1';
+// // import MainComp,{ Comp1,Comp2 } from './pack1/module1';
+// import { default as MainComp,Comp1 } from './pack1/module1';
 
-var c1 = new Comp1();
-c1.whoAmI();
-
-
-var main = new MainComp();
-main.whoAmI();
+// var c1 = new Comp1();
+// c1.whoAmI();
 
 
+// var main = new MainComp();
+// main.whoAmI();
 
+
+//---------------------------------------------------------------
+
+
+var greet = () => { console.log("Hello") };
+greet();
