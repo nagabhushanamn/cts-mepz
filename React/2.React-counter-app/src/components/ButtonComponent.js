@@ -2,17 +2,14 @@ import React, {Component} from 'react'
 
 class ButtonComponent extends Component {
 
-    clickHandler() {
-        this.props.incCount();
-    }
 
-    render() {
-        console.log('ButtonComponent::render()');
+    render() {        
+        let {incCount,incBy} = this.props;
         return (
-            <div>
-                <button onClick={this.clickHandler.bind(this)}
+            <div className="col-md-4 col-sm-4 col-xs-4">
+                <button onClick={() => { incCount(incBy) }}
                         className="btn btn-lg btn-primary">
-                    +1
+                    {incBy}
                 </button>
             </div>
         )
