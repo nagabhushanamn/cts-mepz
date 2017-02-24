@@ -1,0 +1,14 @@
+
+
+ components
+ ----------------------------------
+
+  1. Game
+
+     a. NumbersFrame
+     b. StarsFrame
+     c. AnswerFrame
+     d. ButtonFrame
+     e. DoneFrame
+
+  --------------------------------   
