@@ -1,0 +1,11 @@
+
+
+React ==> component
+-------------------
+
+ --> construction
+ --> mounting
+ --> updating
+ --> unmounting
+
+ ------------------------------
