@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import StoryForm from './StoryForm';
+import ToggleForm from './ToggleForm';
 import StoryList from './StoryList';
 
 class StoryBox extends Component {
@@ -7,20 +7,24 @@ class StoryBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            stories:[]
+            stories: []
         };
     }    
 
     addNewStory(newStory) {
         this.setState({stories:[newStory,...this.state.stories]});
     }
+    deleteStory(id) {
+        let stories = this.state.stories.filter((story) => story.id === id ? false : true);
+        this.setState({ stories: stories });
+    }
 
     render() {
-        let {stories} = this.state;
+        let {stories,isStoryFormOpen} = this.state;
         return (
             <div className="col-md-6">
-                <StoryForm submitHandler={(story) => { this.addNewStory(story)}}/>
-                <StoryList stories={stories}/>
+                <ToggleForm submitHandler={(story) => { this.addNewStory(story)}}/>
+                <StoryList stories={stories} deleteStory={(id) => { this.deleteStory(id) }}/>
             </div>
         )
     }

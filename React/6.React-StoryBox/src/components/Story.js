@@ -2,12 +2,19 @@ import React, {Component} from 'react'
 
 class Story extends Component {
     render() {
-        let {story} = this.props;
+        let {story,deleteStory} = this.props;
         return (
             <div className="alert alert-success">
-                Name: {story.name}
-                <span className="glyphicon glyphicon-edit"></span>
-                <span className="glyphicon glyphicon-trash"></span>
+                <div className="row">
+                    <div className="col-md-9 col-sm-9 col-xs-9">
+                        Name:{story.name}
+                    </div>
+                    <div className="col-md-3 col-md-3 col-md-3">
+                        <span className="glyphicon glyphicon-trash" style={{cursor:'pointer'}}
+                            onClick={() => { deleteStory(story.id) }}>
+                        </span>
+                    </div>
+                </div>
                 <hr />
                 {story.comment}
             </div>

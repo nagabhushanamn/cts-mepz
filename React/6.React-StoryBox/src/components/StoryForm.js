@@ -5,6 +5,7 @@ class StoryForm extends Component {
     submitHandler(event) {
         event.preventDefault();
         let newStory = {
+            id: Math.floor((Math.random()*100)+1),
             name: this.refs.name.value,
             comment: this.refs.comment.value
         };

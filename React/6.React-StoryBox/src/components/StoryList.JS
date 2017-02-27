@@ -4,12 +4,12 @@ import Story from './Story';
 
 class StoryList extends Component {
     render() {
-        
-        let {stories} = this.props;
+
+        let {stories,deleteStory} = this.props;
 
         let storyComps = stories.map((story, index) => {
             return (
-                <Story story={story} key={index} />
+                <Story story={story} key={index} deleteStory={deleteStory}/>
             );
          });
         
