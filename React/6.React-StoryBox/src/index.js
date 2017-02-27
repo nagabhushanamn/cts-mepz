@@ -3,9 +3,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import StoryBox from './components/StoryBox'
+
 
 ReactDOM.render(
-    <App />,
+    <StoryBox />,
     document.getElementById('root')
 );
