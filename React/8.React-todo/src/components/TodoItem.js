@@ -41,6 +41,7 @@ class TodoItem extends Component {
         } else {
             element = (
                 <TodoTextInput
+                    editing
                     text={todo.text}
                     onSave={(text) => { this.handleSave(todo.id, text) }}
                 />
@@ -48,7 +49,11 @@ class TodoItem extends Component {
         }
 
         return (
-            <li className={classnames({completed:todo.completed})}>
+            <li className={classnames({
+                completed:todo.completed,
+                editing:this.state.editing
+                }
+             )}>
                 {element}
             </li>
         )

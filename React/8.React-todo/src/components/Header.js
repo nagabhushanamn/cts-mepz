@@ -13,7 +13,11 @@ class Header extends Component {
         return (
             <header>
                 <h1>todos</h1>
-                <TodoTextInput onSave={this.handleSave.bind(this)}/>
+                <TodoTextInput
+                    newTodo    
+                    onSave={this.handleSave.bind(this)}
+                    placeholder={"What needs to be done?"}
+                />
             </header>  
         )
     }

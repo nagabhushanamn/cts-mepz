@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import classnames from 'classnames';
 
 class TodoTextInput extends Component {
 
@@ -24,7 +25,12 @@ class TodoTextInput extends Component {
     render () {
         return (
             <input
-                className="new-todo"
+                className={classnames({
+                    'new-todo':this.props.newTodo,
+                    'edit':this.props.editing
+                })}
+                autoFocus={true}
+                placeholder={this.props.placeholder}
                 onKeyUp={this.handleSubmit.bind(this)}
                 onChange={this.handleChange.bind(this)}
                 value={this.state.text}
