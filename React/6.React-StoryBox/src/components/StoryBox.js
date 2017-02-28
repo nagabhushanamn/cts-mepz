@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ToggleForm from './ToggleForm';
+import ToggleStoryForm from './ToggleStoryForm';
 import StoryList from './StoryList';
 
 class StoryBox extends Component {
@@ -23,8 +23,9 @@ class StoryBox extends Component {
         let {stories,isStoryFormOpen} = this.state;
         return (
             <div className="col-md-6">
-                <ToggleForm submitHandler={(story) => { this.addNewStory(story)}}/>
-                <StoryList stories={stories} deleteStory={(id) => { this.deleteStory(id) }}/>
+                <ToggleStoryForm submitHandler={(story) => { this.addNewStory(story)}}/>
+                <hr/>
+                <StoryList stories={stories} deleteStory={(id) => { this.deleteStory(id) }} />
             </div>
         )
     }

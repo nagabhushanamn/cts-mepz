@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import StoryForm from './StoryForm';
 
-class ToggleForm extends Component {
+class ToggleStoryForm extends Component {
 
     constructor(props) {
         super(props);
@@ -33,4 +33,4 @@ class ToggleForm extends Component {
     }
 }
 
-export default ToggleForm
+export default ToggleStoryForm

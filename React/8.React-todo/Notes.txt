@@ -1,0 +1,35 @@
+
+Step 1: Break The UI Into A Component Hierarchy
+
+   container
+
+     1. App
+
+   presentational components
+
+     1. Header
+        1.1. TodoTextInput
+     2. MainSection
+        2.1  TodoItem  
+        2.2  Footer
+
+----------------------------------------------------------             
+
+Step-2: Step 2: Build A Static Version in React #
+
+//--------------------------------------------------------
+
+Step 3: Identify The Minimal (but complete) Representation Of UI State
+
+   state ==> todos
+
+//---------------------------------------------------------
+
+Step 4: Identify Where Your State Should Live 
+
+
+    App ==> stateful ==> {todos}
+
+//---------------------------------------------------------    
+
+
