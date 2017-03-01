@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import Button from './Button';
 import Display from './Display';
 
+import store from '../store';
+import * as actions from '../actions/counter';
+
+
 class App extends Component {
 
     constructor(props) {
@@ -9,7 +13,19 @@ class App extends Component {
         this.state = {count:0};
     }   
     doCount(num) {
-        this.setState({count:this.state.count+num}) 
+        store.dispatch(actions.increment(num));
+    }
+    componentDidMount() {
+        var self = this;
+        
+        let count = store.getState().counter.count;
+        self.setState({count});
+        
+        store.subscribe(function () { 
+            let count = store.getState().counter.count;
+            self.setState({count});
+        });
+
     }
     render() {
         let {count} = this.state;
