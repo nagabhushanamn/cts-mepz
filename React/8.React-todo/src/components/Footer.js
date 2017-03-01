@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import {SHOW_ALL,SHOW_ACTIVE,SHOW_COMPLETED} from '../constants/TodoFilters';
 
+import { Link } from 'react-router';
 
 const FILTER_TITLES={
  [SHOW_ALL]:'All'   ,
@@ -23,12 +24,15 @@ class Footer extends Component {
         const {onShow,filter:selectedFilter}=this.props;
 
         return (
-            <a style={{cursor:'pointer'}} 
+            /*
+            <a style={{cursor:'pointer'}}
                className={classnames({selected:filter===selectedFilter})}
                onClick={()=>onShow(filter)}
                >
                 {title}
             </a>
+            */
+            <Link to={'/'+filter}>{title}</Link>
         );
     }
     renderClearCompleted(){

@@ -67,7 +67,7 @@ class App extends Component {
         return (
             <div>
                 <Header addTodo={actions.addTodo}/>
-                <MainSection todos={todos} actions={actions}/>
+                <MainSection todos={todos} actions={actions} filter={this.props.params.filter}/>
             </div>
         )
     }

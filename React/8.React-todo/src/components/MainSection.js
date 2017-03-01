@@ -28,8 +28,8 @@ class MainSection extends Component {
     render() {
         
         let {todos,actions} = this.props;
-        let {filter}=this.state;
-        
+        //let {filter}=this.state;
+        let {filter} = this.props;
         let filteredTodos=todos.filter(TODO_FILTERS[filter]);
         let completedCount=todos.reduce((count,todo)=>{
             return todo.completed?count+1:count
