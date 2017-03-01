@@ -12,7 +12,6 @@ var initialState = {
 
 export default function todosReducer(state=initialState.todos,action) {
     
-
     switch (action.type){
         
         case ADD_TODO:

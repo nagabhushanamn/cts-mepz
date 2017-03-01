@@ -3,6 +3,9 @@ import Header from '../components/Header';
 import MainSection from '../components/MainSection'
 
 import * as actions from '../actions/todos';
+import { connect } from 'react-redux';
+
+import { bindActionCreators } from 'redux';
 
 class App extends Component {
 
@@ -11,8 +14,7 @@ class App extends Component {
     }
 
     render() {
-        let {todos} = this.props;
-        todos = todos || []; // for test
+        let {todos,actions} = this.props;
         return (
             <div>
                 <Header addTodo={actions.addTodo}/>
@@ -22,4 +24,15 @@ class App extends Component {
     }
 }
 
-export default App
+function mapStateToProps(state) {
+    return {
+        todos:state.todos
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions,dispatch)
+    };
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App)
