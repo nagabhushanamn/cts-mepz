@@ -1,14 +1,15 @@
 
 
 
-import { createStore } from 'redux';
+import { createStore,applyMiddleware  } from 'redux';
+import thunk from 'redux-thunk';
 
 
-//---------------------------------------------------------
 
-// Reducer
 
-function countReducer(state,action) {
+//--------------------------------------------------
+
+function counterReducer(state,action) {
     switch (action.type) {
         case "INCREMENT": {
             return Object.assign({}, state, {count:state.count+action.count});
@@ -20,13 +21,24 @@ function countReducer(state,action) {
             return state;    
     }    
 }
-//---------------------------------------------------------
 
-var store = createStore(countReducer, {count:0},window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+//--------------------------------------------------
 
-//---------------------------------------------------------
+const composeEnhancers =
+  typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
 
-// Action - creator(s)
+const middleware = [thunk];
+const enhancer = composeEnhancers(
+  applyMiddleware(...middleware)
+);
+const store = createStore(counterReducer, {count:0},enhancer);
+
+//----------------------------------------------------
+
+
+// Sync - Actioncreator(s)
 
 function increment(count) {
     return {type:'INCREMENT',count};
@@ -35,10 +47,29 @@ function decreemnt(count) {
     return {type:'DECREMENT',count};
 }
 
-//----------------------------------------------------------
+// Asynch - ActionCreator
 
-store.dispatch(increment(1));
-store.dispatch(increment(1));
-store.dispatch(decreemnt(1));
-console.log(store.getState());
+function incrementAsync(count) {
+    return function (dispatch) {
+        
+        //1. An action informing the reducers that the request began.
+        console.log('Async oprn beginned...');
+        // async oprn
+        setTimeout(() => {
+            
+            console.log('Async oprn fininised...');
+            //2. An action informing the reducers that the request finished successfully.
+            dispatch(increment(count));
 
+            //store.dispatch(incrementAsync(10)); // async-action
+
+            //3. An action informing the reducers that the request failed.
+
+        }, 2000); 
+    }
+}
+
+//----------------------------------------------------
+
+store.dispatch(increment(10));  //sync-action
+store.dispatch(incrementAsync(10)); // async-action
