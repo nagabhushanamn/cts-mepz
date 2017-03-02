@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongods": {
+    "url": "mongodb://user1:user1@ds139675.mlab.com:39675/todos",
+    "name": "mongods",
+    "connector": "mongodb"
+  }
+}

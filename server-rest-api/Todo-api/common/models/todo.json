@@ -1,0 +1,29 @@
+{
+  "name": "Todo",
+  "plural": "todos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mongodb":{
+      "collection":"todos"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "completed": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
