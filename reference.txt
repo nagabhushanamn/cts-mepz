@@ -1,0 +1,99 @@
+
+
+
+    Learning Path
+    -------------------
+
+    1. data-types
+    2. objects  ==> depth
+    3. execution context(s)  & scope chain
+    4. function => depth
+    5. how to invoke function(s) ==> 'this' keyword
+    6. closures
+    8. Inhritance    
+    9. concurrency-model ==> callback
+    10. adnavned .js syntax ( es6)
+
+    -------------------------------------------------------
+
+    learning resources
+    -------------------
+
+        1. exploringjs.com
+        2. MDN javascript
+        3. http://crockford.com/ : JS good parts
+
+    -------------------------------------------------------
+
+    Js utility libraries
+    --------------------
+
+     a. underscore.js
+        or
+     b. lodash   
+
+    --------------------------------------------------------
+
+
+    client-side(browser) development
+    ---------------------------------
+
+      HTMl-5 APIs
+
+      ref : https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5
+
+            http://caniuse.com/
+    ------------------------------------------------------------  
+
+
+    JS libraries / F.W
+    -------------------
+
+       React  ( View library)
+
+       Angular-2
+
+       Polymer ==> Web-component spec based lib
+           
+
+   ---------------------------------------------------------------
+
+   style
+
+     ==> css3
+
+     ==> RWD concepts ( bootstrap,foundation,..)
+
+     ==> Material UI
+
+   --------------------------------------------------------------
+
+
+   Build Tools
+   --------------
+
+     --> Grunt
+     --> Gulp
+     --> webpack ( prefred )
+
+    -------------------------------------------------------------
+
+    Unit Testing F.Ws
+    ---------------------
+
+    ==> Mocha  with Chai and sinon
+
+    -------------------------------------------------------------
+
+
+    http://jstherightway.org/
+
+
+
+
+
+
+
+
+
+
